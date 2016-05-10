@@ -54,28 +54,33 @@
     };
 
     gulp.task('dependencies', function (cb) {
-        var totalCbs = paths.dependencies.length * 2;
+        var subTasks = 3;
         var cbs = 0;
 
-        paths.dependencies.forEach(function (dep) {
-            // dependent js
-            gulp.src(dep.js)
-                .pipe(gulp.dest(paths.build.scripts))
-                .on('end', function () {
-                    if (++cbs === totalCbs) {
-                        cb();
-                    }
-                });
+        // bootstrap
+        gulp.src(['node_modules/bootstrap/dist/css/*'])
+            .pipe(gulp.dest(paths.build.styles))
+            .on('end', function () {
+                if (++cbs === subTasks) {
+                    cb();
+                }
+            });
 
-            // dependent css
-            gulp.src(dep.css)
-                .pipe(gulp.dest(paths.build.styles))
-                .on('end', function () {
-                    if (++cbs === totalCbs) {
-                        cb();
-                    }
-                })
-        });
+        gulp.src(['node_modules/bootstrap/dist/js/*'])
+            .pipe(gulp.dest(paths.build.scripts))
+            .on('end', function () {
+                if (++cbs === subTasks) {
+                    cb();
+                }
+            });
+
+        gulp.src(['node_modules/bootstrap/dist/fonts/*'])
+            .pipe(gulp.dest(path.join(paths.build.root, 'fonts')))
+            .on('end', function () {
+                if (++cbs === subTasks) {
+                    cb();
+                }
+            });
 
     });
 
