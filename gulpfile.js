@@ -22,6 +22,7 @@
             list: ['demo-page', 'summarize'],
             js: 'js/*.js',
             less: 'less/*.less',
+            img: 'img/*',
             html: '*.html'
         },
         dependencies: [
@@ -44,6 +45,7 @@
             root: 'build/',
             styles: 'build/css/',
             scripts: 'build/js/',
+            img: 'build/img',
             resource: 'build/resource'
         },
         dist: {
@@ -54,7 +56,7 @@
     };
 
     gulp.task('dependencies', function (cb) {
-        var subTasks = 3;
+        var subTasks = 4;
         var cbs = 0;
 
         // bootstrap
@@ -76,6 +78,15 @@
 
         gulp.src(['node_modules/bootstrap/dist/fonts/*'])
             .pipe(gulp.dest(path.join(paths.build.root, 'fonts')))
+            .on('end', function () {
+                if (++cbs === subTasks) {
+                    cb();
+                }
+            });
+
+        // jquery
+        gulp.src(['node_modules/jquery/dist/jquery.min.js'])
+            .pipe(gulp.dest(paths.build.scripts))
             .on('end', function () {
                 if (++cbs === subTasks) {
                     cb();
@@ -131,7 +142,7 @@
     });
 
     gulp.task('pages', function (cb) {
-        var totalCbs = paths.pages.list.length * 3;
+        var totalCbs = paths.pages.list.length * 4;
         var cbs = 0;
 
         paths.pages.list.forEach(function (pageName) {
@@ -152,6 +163,15 @@
                     this.emit('end');
                 })
                 .pipe(gulp.dest(paths.build.styles))
+                .on('end', function () {
+                    if (++cbs === totalCbs) {
+                        cb();
+                    }
+                });
+
+            // page img
+            gulp.src([path.join(pageName, paths.pages.img)])
+                .pipe(gulp.dest(paths.build.img))
                 .on('end', function () {
                     if (++cbs === totalCbs) {
                         cb();
