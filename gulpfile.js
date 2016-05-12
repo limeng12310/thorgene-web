@@ -19,7 +19,7 @@
         },
         pages: {
             // 新增页面时,需要追加list
-            list: ['demo-page', 'app-entry', 'record-detail'],
+            list: ['demo-page', 'summarize'],
             js: 'js/*.js',
             less: 'less/*.less',
             html: '*.html'
