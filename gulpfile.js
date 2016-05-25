@@ -19,7 +19,7 @@
         },
         pages: {
             // 新增页面时,需要追加list
-            list: ['demo-page', 'summarize'],
+            list: ['demo-page', 'summarize', 'about','product','productDetails','productMore_gr'],
             js: 'js/*.js',
             less: 'less/*.less',
             img: 'img/*',
