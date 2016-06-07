@@ -1,0 +1,13 @@
+stages:
+  - deploy
+  
+deploy:
+  stage:
+    deploy
+  script:
+  - rsync -avzP . /srv/docker/thorgene-web/app --exclude=node_modules --exclude=fe_src/node_modules --exclude=.git
+  - cd /srv/docker/thorgene-web/app && npm install
+  only:
+  - master
+  tags:
+  - shell
