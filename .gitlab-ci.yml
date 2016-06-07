@@ -1,0 +1,14 @@
+stages:
+  - deploy
+  
+deploy:
+  stage:
+    deploy
+  script:
+  - rsync -avzP . root@192.168.1.200:/srv/docker/thorgene-web/app --exclude=node_modules --exclude=fe_src/node_modules --exclude=.git
+  - ssh root@192.168.1.200 "cd /srv/docker/thorgene-web/app && npm install"
+  - ssh root@192.168.1.200 "cd /srv/docker/thorgene-web/app && gulp build"
+  only:
+  - master
+  tags:
+  - shell
