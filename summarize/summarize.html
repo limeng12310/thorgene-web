@@ -17,7 +17,6 @@
     <!-- Custom CSS -->
     <link href="css/summarize.css" rel="stylesheet">
     <link href="css/iconfont.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -39,18 +38,46 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active">
-                    <a href="summarize.html">综述</a>
+                <!-- <a href="summarize.html">技术特色</a> -->
+                <li class="dropdown active">
+                    <a href="summarize.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">技术特色 </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">生命秘钥</a></li>|
+                        <li><a href="#">数据魔术手</a></li>|
+                        <li><a href="#">健康云</a></li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="product.html">产品介绍</a>
+                <!-- <a href="product.html">产品指南</a> -->
+                <li class="dropdown">
+                    <a href="product.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品指南 </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="productDetails.html">基因检测</a></li>|
+                        <li><a href="#">健康管理</a></li>|
+                        <li><a href="#">在线咨询</a></li>|
+                        <li><a href="#">报告解读</a></li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="report.html">报告模板</a>
+                <!-- <a href="about.html">关于索真</a -->
+                <li class="dropdown">
+                    <a href="about.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于索真 </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">公司简介</a></li>|
+                        <li><a href="#">微信关联</a></li>|
+                        <li><a href="#">App 下载</a></li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="about.html">关于我们</a>
+                <!-- <a href="report.html">会员专享</a> -->
+                <li class="dropdown">
+                    <a href="report.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">会员专享 </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">全基因组检测</a></li>|
+                        <li><a href="#">重大疾病预警</a></li>|
+                        <li><a href="#">全科私人医生</a></li>|
+                        <li><a href="#">智能健康管家</a></li>
+                    </ul>
                 </li>
+                
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -59,139 +86,154 @@
 </nav>
 
 
- <header id="myCarousel" class="carousel slide"> 
-    <div class="container">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-        <!-- Wrapper for slides -->
-         <div class="carousel-inner"> 
-            <div class="item active row top">
-                <div class="col-xs-12 col-md-4">
-                    <div>
-                        <img src="img/1-1-left-01.png" class="img-responsive
-                        img-one">
-                        <h1 class="imgintro1"><strong>精准 健康 服务</strong></h1>
-                        <h2 class="imgintro2"><strong>ACCURATE DIAGNOSIS</strong></h2>
-                        <ul class="text">
-                            <li><h4><strong>储蓄医学数据</strong></h4></li>
-                            <li><h4><strong>增值健康生命</strong></h4></li>
-                            <li><h4><strong>基于个人基因的精准健康服务</strong></h4></li>
-                        </ul>
+<header id="myCarousel" class="carousel slide"> 
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+     <div class="carousel-inner">
+        <div class="item active row top">
+            <img class="img-responsive-thech" src="img/slide-1.jpg"> </img>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-12 rowHeight"></div>
+                    <div class="col-xs-6 col-lg-4">
+                        <div class="textbg">
+                            <div class="sizeFive">数据 智能 健康</div>
+                            <div class="sizeSix">索真 发现生命之美</div>
+                            <div class="sizeSeven">全面基因解读</div>
+                            <div class="sizeSeven">精准健康治疗</div>
+                            <div class="sizeSeven">专业数据管理</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-md-7 resetWidth">
-                    <img class="img-responsive" src="img/slide-1.jpg"> </img>
+                    <div class="col-xs-6 col-lg-8"></div>
                 </div>
             </div>
-            <div class="item row top">
-                <div class="col-xs-12 col-md-4">
-                    <h1 class="imgintro1"><strong>基因检测</strong></h1>
-                    <h2 class="imgintro2"><strong>GENE DETECTION</strong></h2>
-                    <div class="text">
-                        <h4><strong>200项基因检测及解读</strong></h4>
-                        <h4><strong>爱的传递</strong><img class="love" src="img/love.png"></img></h4>
-                        <a href="">more...</a>
+        </div>
+        <div class="item row top">
+            <img class="img-responsive-thech" src="img/slide-2.jpg"> </img>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-12 rowHeight"></div>
+                    <div class="col-xs-6 col-lg-4">
+                        <div class="textbg">
+                            <div>数据 智能 健康</div>
+                            <div>索真 发现生命之美</div>
+                            <div>全面基因解读</div>
+                            <div>精准健康治疗</div>
+                            <div>专业数据管理</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-7 resetWidth">
-                    <img class="img-responsive" src="img/slide-2.jpg"> </img>
+                    <div class="col-xs-6 col-lg-8"></div>
                 </div>
             </div>
-            <div class="item row top">
-                <div class="col-xs-12 col-md-4">
-                    <h1 class="imgintro1"><strong>大数据基因解读</strong></h1>
-                    <h2 class="imgintro2"><strong>GENE DETECTION</strong></h2>
-                    <div class="text">
-                        <a href="">more...</a>
+        </div>
+        <div class="item row top">
+            <img class="img-responsive-thech" src="img/slide-3.jpg" class="imgThree"> </img>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-12 rowHeight"></div>
+                    <div class="col-xs-6 col-lg-4">
+                        <div class="textbg">
+                            <div>数据 智能 健康</div>
+                            <div>索真 发现生命之美</div>
+                            <div>全面基因解读</div>
+                            <div>精准健康治疗</div>
+                            <div>专业数据管理</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-7 resetWidth">
-                    <img src="img/slide-3.jpg" class="imgThree"> </img>
+                    <div class="col-xs-6 col-lg-8"></div>
                 </div>
             </div>
-            <div class="item row top">
-                <div class="col-xs-12 col-md-4">
-                    <h1 class="imgintro1"><strong>移动互联网应用&nbsp;&nbsp;&nbsp; 健康云</strong></h1>
-                    <h2 class="imgintro2"><strong>GENE DETECTION</strong></h2>
-                    <div class="text">
-                        <h4><strong>随身健康云管家，根据基因分析结果量身定制健康管理方案</strong></h4>
-                        <h4><strong>爱的传递</strong><img class="love" src="img/love.png"></img></h4>
-                        <a href="">more...</a>
+        </div>
+        <div class="item row top">
+            <img class="img-responsive-thech" src="img/slide-4.jpg"> </img>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-12 rowHeight"></div>
+                    <div class="col-xs-6 col-lg-4">
+                        <div class="textbg">
+                            <div>数据 智能 健康</div>
+                            <div>索真 发现生命之美</div>
+                            <div>全面基因解读</div>
+                            <div>精准健康治疗</div>
+                            <div>专业数据管理</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-7 resetWidth">
-                    <img class="img-responsive" src="img/slide-4.jpg"> </img>
+                    <div class="col-xs-6 col-lg-8"></div>
                 </div>
             </div>
-        </div> 
+        </div>
+    </div> 
 
-        <!-- Controls -->
-         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
 
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </div>
- </header> 
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</header> 
 <!-- Footer -->
 <div class="foot">
-    <div class="container">
+    <div class="container hidden-xs">
         <div class="row">
-            <div class="col-xs-12 col-lg-4">
-                <div>
-                    <div class="sizeTwo">科技关爱生命</div>
-                    <div class="sizeThree">微信服务号</div>
-                </div>
-                <div class="QRout"><img class="QR" src="img/QR.jpg"></img></div>
-                <img class="sina" src="img/sina.png"></img>
-                <div class="sizeTwo">关注索真</div>
+            <div class="col-xs-12 col-sm-3 col-lg-3">            
+                <div class="sizeTwo connect">基因检测</div>
+                <div class="sizeFour">肿瘤基因突变检测</div>
+                <div class="sizeFour">遗传性疾病基因检测</div>
+                <div class="sizeFour">全基因组检测</div>
+                <div class="sizeFour">重大疾病预警－针对VIP用户</div>
+                <!-- <div class="QRout"><img class="QR" src="img/QR.jpg"></img></div>
+                <img class="sina" src="img/sina.png"></img> -->
             </div>
-            <div class="col-xs-12 col-lg-4 center">
-                <div>
-                    <div class="sizeOne ">索真</div>
-                    <img class="tansuo" src="img/tansuo.png"></img>
-                    <!-- <div class="sizeFour">探索求真</div> -->
-                </div>
-                <div class="verticalLine"></div>
-                <div class="leftalign">
-                    <div class="sizeTwo">文化</div>
-                    <div class="sizeTwo">战略</div>
-                    <div class="sizeTwo">历程</div>
-                    <div class="sizeTwo">职业发展</div>
-                    <div class="sizeTwo">联系我们</div>
-                </div>
-                <!-- <p>Copyright &copy; Your Website 2014</p> -->
+            <div class="col-xs-12 col-sm-3 col-lg-3">
+                <div class="sizeTwo connect">精准医疗</div>
+                <div class="sizeFour">智能健康咨询</div>
+                <div class="sizeFour">健康数据分析</div>
+                <div class="sizeFour">全科私人医生</div>
             </div>
-            <div class="col-xs-12 col-lg-3">
+            <div class="col-xs-12 col-sm-3 col-lg-3">
+                <div class="sizeTwo connect">数据服务</div>
+                <div class="sizeFour">海量数据存储</div>
+                <div class="sizeFour">深度数据挖掘</div>
+                <div class="sizeFour">安全规范的数据管理</div>
+                <div class="sizeFour">面向精准医学的分析报告</div>
+                <!-- <img class="tel" src="img/tel.png"></img> -->
+            </div> 
+            <div class="col-xs-12 col-sm-3 col-lg-3">
                 <div class="sizeTwo connect">联系我们</div>
-                <img class="tel" src="img/tel.png"></img>
+                <div class="sizeFour">公司简介</div>
+                <div class="sizeFour">微信关联</div>
+                <div class="sizeFour">App下载</div>
+                <!-- <img class="tel" src="img/tel.png"></img> -->
                 <!-- <p>Copyright ©  &copy; Your Website 2014</p> -->
-            </div>      
+            </div>     
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <span>copyright @ 索真 &nbsp;&nbsp;ICP:京ICP备15059872号-1 &nbsp;&nbsp;技术支持：天方创新（北京）信息技术有限公司 </span>
+                </div>
+            </div>
         </div>
     </div>
 </div> 
-<div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 ">
-                <span>copyright @ 索真 &nbsp;&nbsp;ICP:京ICP备15059872号-1 &nbsp;&nbsp;技术支持：天方创新（北京）信息技术有限公司 </span>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
+<script src="js/summarize.js"></script>
 <!-- Script to Activate the Carousel -->
 <script>
     $('.carousel').carousel({
