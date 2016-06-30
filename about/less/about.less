@@ -110,7 +110,11 @@ footer {
     background-color: #fff;
     border-bottom-width: 5px;
     border-color: #CACACA;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.80;
+    opacity: 0.80;
 }
+
 .carousel-control.left,
 .carousel-control.right{
     background-image: none;
@@ -180,10 +184,22 @@ footer {
     width: 100%;
     // height: 30%;
     color: #fff;
-    text-align: center;
-    padding: 1.5rem 0;
+    // text-align: center;
+    padding: 1.5rem 0 0 0;
     margin-top: 3rem;
     border: 1px #29292A solid;
+    filter:alpha(opacity=80); /*支持 IE 浏览器*/
+    -moz-opacity:0.80; 
+    opacity:0.80; /*支持 Chrome, Opera, Safari 等浏览器*/
+}
+
+.foot>.container {
+    padding-bottom: 1.5rem;
+}
+@media (max-width: 768px){
+    .foot {
+        padding: 0;
+    }
 }
 
 .sizeOne {
@@ -243,10 +259,10 @@ footer {
     padding-bottom: 0.7rem;
 }
 
-.QR {
-    border-radius: 0.8rem;
-    width: 7rem;
-}
+// .QR {
+//     border-radius: 0.8rem;
+//     width: 7rem;
+// }
 
 .sina {
     width: 4.5rem;
@@ -298,4 +314,66 @@ footer {
     border:1px solid #8B8A8F;
     text-align:right;
 }
+
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: #206DA3;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #206DA3;
+}
+
+.dropdown-menu > li > a, .dropdown-menu > li > a {
+    color: #206DA3;
+    text-decoration: none;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #206DA3;
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #206DA3;
+    white-space: nowrap;
+}
+
+.open > .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu {
+    color: #CACACA;
+}
+
+@media (max-width: 767px){
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #206DA3;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+        color: #fff;
+        background-color: #206DA3;
+    }
+}
+
+.blank {
+    text-indent: 2em;
+}
+
+.QR {
+    width: 140px;
+    heihgt: auto;
+}
+
+
 /*End of Define*/
