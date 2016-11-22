@@ -19,7 +19,7 @@
         },
         pages: {
             // 新增页面时,需要追加list
-            list: ['demo-page', 'summarize', 'about','product','productMore_gr','report','reportDetails','reportOCD','technology','life','data','health','gene','healthmanage','online','analyze','vip'],
+            list: ['a','demo-page', 'summarize', 'about','product','productMore_gr','report','reportDetails','reportOCD','technology','life','data','health','gene','healthmanage','online','analyze','vip'],
             js: 'js/*.js',
             less: 'less/*.less',
             img: 'img/*',
